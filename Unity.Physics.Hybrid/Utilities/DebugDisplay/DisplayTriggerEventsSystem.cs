@@ -10,8 +10,9 @@ using Unity.Physics.Systems;
 namespace Unity.Physics.Authoring
 {
     // A system which draws any trigger events produced by the physics step system
-    [UpdateAfter(typeof(StepPhysicsWorld)), UpdateBefore(typeof(EndFramePhysicsSystem))]
-    public class DisplayTriggerEventsSystem : JobComponentSystem
+   // [UpdateAfter(typeof(StepPhysicsWorld)), UpdateBefore(typeof(EndFramePhysicsSystem))]
+   [DisableAutoCreation] 
+   public class DisplayTriggerEventsSystem : JobComponentSystem
     {
         BuildPhysicsWorld m_BuildPhysicsWorldSystem;
         StepPhysicsWorld m_StepPhysicsWorldSystem;

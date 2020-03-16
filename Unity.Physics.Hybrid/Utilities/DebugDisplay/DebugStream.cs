@@ -7,7 +7,8 @@ using Unity.Physics.Systems;
 using UnityEditor;
 using UnityEngine;
 
-[UpdateBefore(typeof(BuildPhysicsWorld))]
+//[UpdateBefore(typeof(BuildPhysicsWorld))]
+[DisableAutoCreation]
 public class DebugStream : ComponentSystem
 {
     readonly List<NativeStream> m_DebugStreams = new List<NativeStream>();

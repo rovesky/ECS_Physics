@@ -9,7 +9,8 @@ using UnityEngine;
 namespace Unity.Physics.Authoring
 {
     /// A system to display debug geometry for all body colliders
-    [UpdateAfter(typeof(StepPhysicsWorld))]
+   // [UpdateAfter(typeof(StepPhysicsWorld))]
+    [DisableAutoCreation]
     public class DisplayBodyColliders : ComponentSystem
     {
         BuildPhysicsWorld m_BuildPhysicsWorldSystem;

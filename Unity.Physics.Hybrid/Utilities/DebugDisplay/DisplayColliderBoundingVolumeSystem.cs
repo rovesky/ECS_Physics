@@ -37,7 +37,8 @@ namespace Unity.Physics.Authoring
     }
 
     /// Create a DisplayColliderAabbsJob
-    [UpdateAfter(typeof(BuildPhysicsWorld)), UpdateBefore(typeof(EndFramePhysicsSystem))]
+   // [UpdateAfter(typeof(BuildPhysicsWorld)), UpdateBefore(typeof(EndFramePhysicsSystem))]
+    [DisableAutoCreation]
     public class DisplayColliderAabbsSystem : JobComponentSystem
     {
         BuildPhysicsWorld m_BuildPhysicsWorldSystem;

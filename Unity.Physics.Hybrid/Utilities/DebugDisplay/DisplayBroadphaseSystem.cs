@@ -57,7 +57,8 @@ namespace Unity.Physics.Authoring
     }
 
     /// Creates DisplayBroadphaseJobs
-    [UpdateAfter(typeof(BuildPhysicsWorld)), UpdateBefore(typeof(EndFramePhysicsSystem))]
+ //   [UpdateAfter(typeof(BuildPhysicsWorld)), UpdateBefore(typeof(EndFramePhysicsSystem))]
+    [DisableAutoCreation]
     public class DisplayBroadphaseAabbsSystem : JobComponentSystem
     {
         BuildPhysicsWorld m_BuildPhysicsWorldSystem;

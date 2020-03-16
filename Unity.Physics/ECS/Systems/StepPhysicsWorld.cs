@@ -6,7 +6,8 @@ using UnityEngine.Assertions;
 namespace Unity.Physics.Systems
 {
     // Simulates the physics world forwards in time
-    [UpdateAfter(typeof(BuildPhysicsWorld)), UpdateBefore(typeof(ExportPhysicsWorld)), AlwaysUpdateSystem]
+   // [UpdateAfter(typeof(BuildPhysicsWorld)), UpdateBefore(typeof(ExportPhysicsWorld)), AlwaysUpdateSystem]
+    [DisableAutoCreation]
     public class StepPhysicsWorld : JobComponentSystem
     {
         // The simulation implementation

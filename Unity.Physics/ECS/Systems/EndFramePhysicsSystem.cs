@@ -6,7 +6,8 @@ namespace Unity.Physics.Systems
 {
     // A system which combines the dependencies of all other physics jobs created during this frame into a single handle,
     // so that any system which depends on all physics work to be finished can just depend on this single handle.
-    [UpdateAfter(typeof(BuildPhysicsWorld)), UpdateAfter(typeof(StepPhysicsWorld)), UpdateAfter(typeof(ExportPhysicsWorld))]
+//    [UpdateAfter(typeof(BuildPhysicsWorld)), UpdateAfter(typeof(StepPhysicsWorld)), UpdateAfter(typeof(ExportPhysicsWorld))]
+    [DisableAutoCreation]
     public class EndFramePhysicsSystem : JobComponentSystem
     {
         // Extra physics jobs added by user systems

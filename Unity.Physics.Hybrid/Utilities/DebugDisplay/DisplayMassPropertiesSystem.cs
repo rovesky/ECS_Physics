@@ -10,7 +10,8 @@ using Unity.Burst;
 namespace Unity.Physics.Authoring
 {
     /// Create and dispatch a DisplayMassPropertiesJob
-    [UpdateAfter(typeof(StepPhysicsWorld)), UpdateBefore(typeof(EndFramePhysicsSystem))]
+   // [UpdateAfter(typeof(StepPhysicsWorld)), UpdateBefore(typeof(EndFramePhysicsSystem))]
+    [DisableAutoCreation]
     public class DisplayMassPropertiesSystem : JobComponentSystem
     {
         BuildPhysicsWorld m_BuildPhysicsWorldSystem;

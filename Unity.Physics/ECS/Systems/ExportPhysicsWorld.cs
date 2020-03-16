@@ -9,8 +9,9 @@ namespace Unity.Physics.Systems
 {
     // A system which copies transforms and velocities from the physics world back to the original entity components.
     // CK: We make sure we update before CopyTransformToGameObjectSystem so that hybrid GameObjects can work with this OK, even if that path is slow.
-    [UpdateAfter(typeof(StepPhysicsWorld)), UpdateBefore(typeof(EndFramePhysicsSystem)), UpdateBefore(typeof(TransformSystemGroup))]
-    public class ExportPhysicsWorld : JobComponentSystem
+   // [UpdateAfter(typeof(StepPhysicsWorld)), UpdateBefore(typeof(EndFramePhysicsSystem)), UpdateBefore(typeof(TransformSystemGroup))]
+   [DisableAutoCreation] 
+   public class ExportPhysicsWorld : JobComponentSystem
     {
         public JobHandle FinalJobHandle { get; private set; }
 

@@ -12,6 +12,7 @@ namespace Unity.Physics.Systems
     // A system which builds the physics world based on the entity world.
     // The world will contain a rigid body for every entity which has a rigid body component,
     // and a joint for every entity which has a joint component.
+    [DisableAutoCreation]
     public class BuildPhysicsWorld : JobComponentSystem
     {
         public PhysicsWorld PhysicsWorld = new PhysicsWorld(0, 0, 0);

@@ -11,7 +11,8 @@ using Unity.Physics.Systems;
 namespace Unity.Physics.Authoring
 {
     // A system which draws all contact points produced by the physics step system
-    [UpdateBefore(typeof(StepPhysicsWorld))]
+  //  [UpdateBefore(typeof(StepPhysicsWorld))]
+    [DisableAutoCreation]
     public class DisplayContactsSystem : JobComponentSystem
     {
         StepPhysicsWorld m_StepWorld;

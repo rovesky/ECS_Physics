@@ -11,7 +11,8 @@ using static Unity.Physics.Math;
 namespace Unity.Physics.Authoring
 {
     /// Creates DisplayJointsJobs
-    [UpdateAfter(typeof(BuildPhysicsWorld)), UpdateBefore(typeof(StepPhysicsWorld))]
+  //  [UpdateAfter(typeof(BuildPhysicsWorld)), UpdateBefore(typeof(StepPhysicsWorld))]
+    [DisableAutoCreation]
     public class DisplayJointsSystem : JobComponentSystem
     {
         /// Job which draws every joint
