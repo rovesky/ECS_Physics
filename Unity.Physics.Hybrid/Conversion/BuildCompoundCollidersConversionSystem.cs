@@ -159,7 +159,7 @@ namespace Unity.Physics.Authoring
                             var childHashes = new NativeArray<Hash128>(colliders.Length, Allocator.TempJob, NativeArrayOptions.UninitializedMemory);
                             var childOffsets = new NativeArray<RigidTransform>(colliders.Length, Allocator.TempJob, NativeArrayOptions.UninitializedMemory);
                             var childBlobs = new NativeArray<CompoundCollider.ColliderBlobInstance>(colliders.Length, Allocator.TempJob, NativeArrayOptions.UninitializedMemory);
-                            for (var i = 0; i < children.Length; ++i)
+                            for (var i = 0; i < children.Count(); ++i)
                             {
                                 childHashes[i] = colliders[i].Hash;
                                 childOffsets[i] = colliders[i].Child.CompoundFromChild;
