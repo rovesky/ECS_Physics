@@ -53,7 +53,8 @@ namespace Unity.Physics.Systems
                 },
                 None = new ComponentType[]
                 {
-                    typeof(PhysicsVelocity)
+                    typeof(PhysicsVelocity),
+                    typeof(Parent)
                 }
             });
 
